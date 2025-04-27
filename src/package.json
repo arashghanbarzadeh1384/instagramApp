@@ -1,0 +1,14 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "main": "index.js",
+ "scripts": {
+  "server": "json-server --watch db.json --port 3001"
+},
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jason-server": "^3.0.0"
+  }
+}
