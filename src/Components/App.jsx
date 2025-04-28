@@ -9,9 +9,9 @@ const App = () => {
     <BrowserRouter>
       <NavBarWithLocation />
       <Routes>
-        <Route path="/" element={<Singin />} />
+        <Route path="/singin" element={<Singin />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
@@ -20,7 +20,7 @@ const App = () => {
 const NavBarWithLocation = () => {
   const location = useLocation();
 
-  if (location.pathname === "/") {
+  if (location.pathname === "/singin") {
     return null;
   } else if (location.pathname === "/login") {
     return null;  
