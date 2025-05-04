@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-const Login = ({id}) => {
+const Login = ({ id }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     userName: "",
@@ -28,29 +28,32 @@ const Login = ({id}) => {
           item.password === formData.password
         );
       });
+
       if (loginUsers) {
         Swal.fire({
           title: "Login",
           text: "Login was successful.",
           icon: "success",
-          confirmButtonText: "OK"
-        }).then((result) => {
+          confirmButtonText: "OK",
+        }).then(result => {
           if (result.isConfirmed) {
-            navigate(`/${id}`); 
+            localStorage.setItem("userName", formData.userName);
+            navigate("/");
           }
         });
       } else {
         Swal.fire({
           title: "Login",
           text: "Login was unsuccessful",
-          icon: "error"
-        })
+          icon: "error",
+        });
       }
     } catch (error) {
       console.error("خطا در ارتباط با سرور:", error);
       alert("مشکل در ارتباط با سرور رخ داده است ❗");
     }
   };
+
   return (
     <>
       <LoginForm
