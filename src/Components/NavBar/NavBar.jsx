@@ -1,22 +1,29 @@
 import { GoHome } from "react-icons/go";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { MdOutlineExplore } from "react-icons/md";
 import { RxVideo } from "react-icons/rx";
 import { RiTelegram2Line } from "react-icons/ri";
 import { MdFavoriteBorder } from "react-icons/md";
+
 const NavBar = () => {
+  const location = useLocation();
+
+  const isHomeActive =
+    location.pathname === "/" || /^\/[a-zA-Z0-9]+$/.test(location.pathname);
+
   return (
     <>
-      <div className="bg-[#000000] h-[703px] w-[244px]">
+      <div className="bg-[#000000] h-[703px] w-[244px] border-r-1 border-white">
         <h1 className="text-white font__fantasy relative top-3 ml-5 p-3 text-3xl">
           Instagram
         </h1>
+
         <div className="mt-12 ml-3 hover:bg-[#292929] rounded-[7px] p-1 w-[90%] transition duration-800 ease-in-out">
           <NavLink
-            to="/home"
-            className={({ isActive }) =>
-              isActive
+            to="/"
+            className={
+              isHomeActive
                 ? "text-white text-2xl font-bold flex items-center"
                 : "text-white text-2xl flex items-center"
             }>
@@ -24,6 +31,7 @@ const NavBar = () => {
             Home
           </NavLink>
         </div>
+
         <div className="mt-12 ml-3 hover:bg-[#292929] rounded-[7px] p-1 w-[90%] transition duration-800 ease-in-out">
           <NavLink
             to="/search"
@@ -36,6 +44,7 @@ const NavBar = () => {
             Search
           </NavLink>
         </div>
+
         <div className="mt-12 ml-3 hover:bg-[#292929] rounded-[7px] p-1 w-[90%] transition duration-800 ease-in-out">
           <NavLink
             to="/explore"
@@ -48,6 +57,7 @@ const NavBar = () => {
             Explore
           </NavLink>
         </div>
+
         <div className="mt-12 ml-3 hover:bg-[#292929] rounded-[7px] p-1 w-[90%] transition duration-800 ease-in-out">
           <NavLink
             to="/reals"
@@ -60,6 +70,7 @@ const NavBar = () => {
             Reals
           </NavLink>
         </div>
+
         <div className="mt-12 ml-3 hover:bg-[#292929] rounded-[7px] p-1 w-[90%] transition duration-800 ease-in-out">
           <NavLink
             to="/messages"
@@ -72,6 +83,7 @@ const NavBar = () => {
             Messages
           </NavLink>
         </div>
+
         <div className="mt-12 ml-3 hover:bg-[#292929] rounded-[7px] p-1 w-[90%] transition duration-800 ease-in-out">
           <NavLink
             to="/favorite"
