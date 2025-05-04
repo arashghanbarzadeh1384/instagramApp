@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-const Login = () => {
+const Login = ({id}) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     userName: "",
@@ -36,7 +36,7 @@ const Login = () => {
           confirmButtonText: "OK"
         }).then((result) => {
           if (result.isConfirmed) {
-            navigate("/"); 
+            navigate(`/${id}`); 
           }
         });
       } else {

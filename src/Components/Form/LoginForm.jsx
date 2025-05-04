@@ -1,68 +1,67 @@
-import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 const LoginForm = ({ formData, handleSubmit, handleOnChange }) => {
-  const form = useForm();
-  const { register } = form;
   return (
-    <>
-      <div className="w-full h-screen flex items-center justify-center bg-[#959D95]">
-        <form
-          action="#"
-          method="POST"
-          onSubmit={handleSubmit}
-          className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold text-center text-amber-800 mb-6">
-            Login
-          </h2>
+    <div className="w-full h-screen flex items-center justify-center bg-[#959D95]">
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-md bg-white rounded-lg shadow-lg p-8"
+      >
+        <h2 className="text-2xl font-bold text-center text-amber-800 mb-6">
+          Login
+        </h2>
 
-          <div className="mb-4">
-            <label
-              htmlFor="userName"
-              className="block text-gray-700 text-lg font-semibold mb-2">
-              Username
-            </label>
-            <input
-              type="text"
-              {...register("userName")}
-              id="userName"
-              value={formData.userName}
-              onChange={handleOnChange}
-              placeholder="Enter er your username"
-              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-800 placeholder-gray-400 text-gray-800"
-            />
-          </div>
+        <div className="mb-4">
+          <label
+            htmlFor="userName"
+            className="block text-gray-700 text-lg font-semibold mb-2"
+          >
+            Username
+          </label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            value={formData.userName}
+            onChange={handleOnChange}
+            placeholder="Enter your username"
+            className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-800 placeholder-gray-400 text-gray-800"
+          />
+        </div>
 
-          <div className="mb-8">
-            <label
-              htmlFor="passWord"
-              className="block text-gray-700 text-lg font-semibold mb-2">
-              Password
-            </label>
-            <input
-              type="password"
-              {...register("password")}
-              id="passWord"
-              value={formData.password}
-              onChange={handleOnChange}
-              placeholder="Enter your password"
-              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-800 placeholder-gray-400 text-gray-800"
-            />
-          </div>
-          <Link
-            className="relative bottom-5 font-bold hover:underline hover:text-gray-600"
-            to="/singin">
-            Singin
-          </Link>
+        <div className="mb-8">
+          <label
+            htmlFor="passWord"
+            className="block text-gray-700 text-lg font-semibold mb-2"
+          >
+            Password
+          </label>
+          <input
+            type="password"
+            id="passWord"
+            name="password"
+            value={formData.password}
+            onChange={handleOnChange}
+            placeholder="Enter your password"
+            className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-800 placeholder-gray-400 text-gray-800"
+          />
+        </div>
 
-          <button
-            type="submit"
-            className="w-full bg-amber-800 hover:bg-amber-700 text-white font-bold py-3 rounded-md transition duration-300">
-            Login
-          </button>
-        </form>
-      </div>
-    </>
+        <Link
+          className="relative bottom-5 font-bold hover:underline hover:text-gray-600"
+          to="/singin"
+        >
+          Singin
+        </Link>
+
+        <button
+          type="submit"
+          className="w-full bg-amber-800 hover:bg-amber-700 text-white font-bold py-3 rounded-md transition duration-300"
+        >
+          Login
+        </button>
+      </form>
+    </div>
   );
 };
 
