@@ -15,5 +15,11 @@
     }
   ],
   "userProfile": [],
-  "userStatus": []
+  "userStatus": [
+    {
+      "postNumber": 12,
+      "followersNumber": 150,
+      "followingNumber": 75
+    }
+  ]
 }

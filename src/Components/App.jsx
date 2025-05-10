@@ -3,19 +3,20 @@ import Home from "../Pages/Home";
 import NavBar from "./NavBar/NavBar";
 import Singin from "../Pages/FormLogin/Singin";
 import Login from "../Pages/FormLogin/Login";
-import Profile from "../Pages/Profile/Profile";
+import ProfileRouter from "../Pages/Profile/ProfileRouter/ProfileRouter";
+import NotFoundPage from "../Pages/NotFoundPage/NotFoundPage";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="flex">
         <NavBarWithLocation />
-        <div className="w-[100%] ">
+        <div className="w-[100%]">
           <Routes>
             <Route path="/singin" element={<Singin />} />
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Home />} />
-            <Route path="/profile/:userName" element={<Profile />} />
+            <Route path="/*" element={<ProfileRouter />} />
           </Routes>
         </div>
       </div>

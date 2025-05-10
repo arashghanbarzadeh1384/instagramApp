@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [userName, setUserName] = useState("");
@@ -13,10 +13,8 @@ const Home = () => {
 
   return (
     <div className="w-[100%] h-[100vh] bg-black">
-      <div className="text-white text-3xl">
-        <Link to={`/profile/${userName}`}>
-          {userName ? userName : "Guest"}
-        </Link>
+      <div className="text-white text-[18px] flex flex-row-reverse mr-[10%] relative top-[5%]">
+        <Link to={`/profile/${userName}`}>{userName.toLowerCase() ? userName.toLowerCase() : "Guest"}</Link>
       </div>
     </div>
   );
