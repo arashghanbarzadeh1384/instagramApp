@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { MyContext } from "../../Pages/FormLogin/Singin";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router";
 
 const SinginForm = () => {
   const form = useForm();
@@ -70,8 +71,8 @@ const SinginForm = () => {
               onChange={e => setPassword(e.target.value)}
               className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-800 placeholder-gray-400 text-gray-800"
             />
+            <h1 className="mt-5">Don't have an account? {<Link to="/login" className=" text-blue-800 font-bold text-[18px] ">Login</Link>}</h1>
           </div>
-
           <button
             type="submit"
             className="w-full bg-amber-800 hover:bg-amber-700 text-white font-bold py-3 rounded-md transition duration-300">

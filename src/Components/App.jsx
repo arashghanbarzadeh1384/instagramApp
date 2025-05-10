@@ -3,6 +3,7 @@ import Home from "../Pages/Home";
 import NavBar from "./NavBar/NavBar";
 import Singin from "../Pages/FormLogin/Singin";
 import Login from "../Pages/FormLogin/Login";
+import Profile from "../Pages/Profile/Profile";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="/singin" element={<Singin />} />
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Home />} />
+            <Route path="/profile/:userName" element={<Profile />} />
           </Routes>
         </div>
       </div>

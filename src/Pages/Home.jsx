@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";  
 
 const Home = () => {
   const [userName, setUserName] = useState("");
 
   useEffect(() => {
-    // گرفتن یوزرنیم از localStorage
     const storedUserName = localStorage.getItem("userName");
     if (storedUserName) {
-      setUserName(storedUserName); // ذخیره یوزرنیم در state
+      setUserName(storedUserName);
     }
   }, []);
 
   return (
-    <div className="w-[100%] h-[100vh] bg-black ">
+    <div className="w-[100%] h-[100vh] bg-black">
       <div className="text-white text-3xl">
-        <h1>{userName ? userName : "Guest"}</h1>
+        <Link to={`/profile/${userName}`}>
+          {userName ? userName : "Guest"}
+        </Link>
       </div>
     </div>
   );

@@ -47,12 +47,7 @@ const LoginForm = ({ formData, handleSubmit, handleOnChange }) => {
           />
         </div>
 
-        <Link
-          className="relative bottom-5 font-bold hover:underline hover:text-gray-600"
-          to="/singin"
-        >
-          Singin
-        </Link>
+        <h1 className="relative bottom-5">Have an account? {<Link to="/singin" className=" text-blue-800 font-bold text-[18px] ">Singin</Link>}</h1>
 
         <button
           type="submit"
