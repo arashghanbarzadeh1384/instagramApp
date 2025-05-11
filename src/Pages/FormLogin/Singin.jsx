@@ -8,7 +8,6 @@ const Singin = () => {
   const [email, setEmail] = useState("");
   const handellSubmit = async e => {
     e.preventDefault();
-    console.log(userName, password);
     await axios.post("http://localhost:3001/loginUser", {
       userName: userName,
       password: password,
