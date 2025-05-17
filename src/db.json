@@ -35,6 +35,24 @@
       "userName": "aaa",
       "password": "aaa",
       "email": "aaa@gamil.com"
+    },
+    {
+      "id": "17bd",
+      "userName": "Arash",
+      "password": "Arash1384",
+      "email": "arash@gmail.com"
+    },
+    {
+      "id": "9446",
+      "userName": "aidagh",
+      "password": "4321",
+      "email": "a@gmail.com"
+    },
+    {
+      "id": "0079",
+      "userName": "marziyeh",
+      "password": "marziyeh13860",
+      "email": "m@gmail.com"
     }
   ],
   "userProfile": [
@@ -51,6 +69,14 @@
       "followersNumber": 150,
       "followingNumber": 75,
       "id": "0c5b"
+    }
+  ],
+  "postUser": [
+    {
+      "id": "ce73",
+      "image": "http://arashghanbarzadeh.ir/Images/Arash.png",
+      "title": "arash",
+      "caption": "arash"
     }
   ]
 }

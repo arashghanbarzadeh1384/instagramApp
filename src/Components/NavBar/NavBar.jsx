@@ -21,7 +21,7 @@ const NavBar = () => {
     setShowPopup(!showPopup);
   };
   return (
-    <div className="bg-black h-[703px] w-[244px] border-r border-white relative">
+    <div className="bg-black h-[703px] w-[244px] border-r border-white sticky top-0">
       <h1 className="text-white font__fantasy relative top-3 ml-5 p-3 text-3xl">
         Instagram
       </h1>
