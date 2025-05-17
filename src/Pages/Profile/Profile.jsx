@@ -8,6 +8,9 @@ const Profile = ({ postNumber, followersNumber, followingNumber }) => {
   const editProfilePage = () => {
     navigate(`/profile/edit/${userName}`);
   };
+  const createPosts = () => {
+    navigate("/create");
+  };
   return (
     <>
       <div className="w-full h-screen bg-black text-white">
